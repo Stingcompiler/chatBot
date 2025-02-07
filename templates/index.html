@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <script>
+
+    </script>
+</head>
+<body>
+<div class="container">
+
+ <div class="header-info">
+  <div class="header-items">
+       <span class="sp">MAL.GOV </span>
+      <img class="logo" src="{{ url_for('static', filename='images/logo.png ') }} " />
+
+  </div>
+
+ <section class="con" id="clb">
+     <div style="border-radius:20px;" class="image">
+        <img style="border-radius:20px;" width="300px" height="300px" src="{{ url_for('static', filename='images/atb.jpg ') }} "  />
+     </div>
+
+     <div class="content">
+     <h2 style="margin-top: 10px;
+    direction: ltr;
+    width: 400px;
+    text-align: center"> وزارة البنى التحتيه والتنمية العمرانيه </h2>
+    <h2  style="
+margin-top: 10px;
+    direction: ltr;
+    width: 400px;
+    text-align: center" >   رئاسة هيئة مياه ولاية نهر النيل  </h2>
+         <h2 style="
+margin-top: 10px;
+    direction: ltr;
+    width: 400px;
+    text-align: center"  >
+             محلية عطبرة
+         </h2>
+         <p class="ln">
+
+         </p>
+
+         <h4 style="margin-top:15px" class="mainc">
+
+             رئاسة هيئة مياه  ولاية نهر النيل  تقع في مدينة عطبرة
+
+             وهي الجهة المسؤولة عن إدارة وتطوير موارد المياه
+
+             في ولاية نهر النيل وتقديم خدمات دعم العملاء مثل
+             الاجابة على استفسارات العملاء وتقديم حلول لمشاكلهم
+              يحتوي الموقع على روبوت دردشة للاجابة على استفسارات العملاء
+         </h4>
+         <h4 style="
+margin-top: 10px;
+    direction: ltr;
+    width: 400px;
+    text-align: right">
+            : روبوت الدردشة
+
+         </h4>
+         <h4 style="
+margin-top: 10px;
+    direction: ltr;
+    width: 400px;
+    text-align: right">
+             هو برنامج ذكاء اصطناعي يمكنه الاجابة على استفساراتك بسهولة ووضوح يمكنك الضغط على زر بدء محادثة لطرح المزيد من الاستفسارات
+         </h4>
+         <div>
+
+
+
+         </div>
+         <h4>
+
+         </h4>
+         <h4 style="margin-top: 10px;
+    direction: ltr;
+    width: 400px;
+    text-align: right">
+
+
+         </h4>
+
+     </div>
+
+ </section>
+
+ </div>
+
+    <div class="chatbox" id="cbc"  >
+        <div class="chatbox__support" id="qschat">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+
+                    <img src="{{ url_for('static', filename='images/icons8-robot-48.png ') }} " />
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 style="colore:black;" class="chatbox__heading--header">روبوت دعم العملاء</h4>
+                    <p style="colore:black;" class="chatbox__description--header">اهلا بك بك يا صديقي كيف يمكنني خدمتك  </p>
+                </div>
+                <button id="btn-c" class="btn-close" style="
+background: none;
+    color: red;
+    border: none;
+    font-size: large;
+    font-weight: bolder;
+"> X </button>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+
+                <input type="text" placeholder=" ما هو سؤالتك  ">
+                <button  class="chatbox__send--footer send__button">
+
+                        ارسال
+                </button>
+            </div>
+        </div>
+        <div id="bt-close" class="chatbox__button ">
+            <button style="    background: none;
+    border: none; color: white;"
+            > بدء محادثة</button>
+        </div>
+    </div>
+
+
+
+</div>
+
+    <script>
+        $SCRIPT_ROOT = {{ request.script_root|tojson }};
+    </script>
+<script>
+    document.getElementById("bt-close").addEventListener("click", function() {
+  document.getElementById("clb").style.display = "none"; // Hide the modal
+});
+      document.getElementById("btn-c").addEventListener("click", function() {
+  document.getElementById("qschat").style.display = "none";
+  document.getElementById("clb").style.display = "flex";
+   // Hide the modal
+});
+
+</script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
